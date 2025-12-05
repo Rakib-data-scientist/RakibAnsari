@@ -27,7 +27,7 @@
             environmentId: environmentId,
             appUrl: appUrl
           });
-          // always show the form on this page
+          // embed the survey inside this page
           window.formbricks.mount("formbricks-container", { forceDisplay: true });
         }
       }, 500);
@@ -48,6 +48,7 @@
     <h1 class="contact-header-title">CONTACT US</h1>
 
     <div class="contact-card">
+        <!-- Formbricks will appear here -->
         <div id="formbricks-container"></div>
     </div>
 
