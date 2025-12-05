@@ -22,10 +22,14 @@
       e.parentNode.insertBefore(t, e);
 
       setTimeout(function () {
-        window.formbricks.setup({
-          environmentId: environmentId,
-          appUrl: appUrl
-        });
+        if (window.formbricks) {
+          window.formbricks.setup({
+            environmentId: environmentId,
+            appUrl: appUrl
+          });
+          // always show the form on this page
+          window.formbricks.mount("formbricks-container", { forceDisplay: true });
+        }
       }, 500);
     }();
     </script>
@@ -44,7 +48,6 @@
     <h1 class="contact-header-title">CONTACT US</h1>
 
     <div class="contact-card">
-        <!-- 🔥 Formbricks container -->
         <div id="formbricks-container"></div>
     </div>
 
@@ -57,15 +60,5 @@
             <a href="/Shipping">Shipping & Delivery Policy</a>
         </div>
     </footer>
-
-    <!-- mount Formbricks form into placeholder -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        if (window.formbricks) {
-          formbricks.mount("formbricks-container");
-        }
-      });
-    </script>
-
 </body>
 </html>
