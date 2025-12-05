@@ -25,7 +25,7 @@ a { text-decoration: none; color: inherit; }
     padding: 20px 5%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #fff; /* White nav by default */
+    background-color: #fff;
 }
 
 .navbar a {
@@ -51,7 +51,6 @@ a { text-decoration: none; color: inherit; }
 .welcome-text { font-size: 3.5rem; font-weight: 700; margin: 0 0 20px 0; }
 .website-word { color: #ff6622; }
 
-/* updated hero image area */
 .hero-image {
     flex: 1;
     display: flex;
@@ -62,11 +61,11 @@ a { text-decoration: none; color: inherit; }
 }
 
 .profile-pic {
-    max-width: 500px;   /* similar prominence as reference */
+    max-width: 500px;
     width: 100%;
     height: auto;
-    border-radius: 0;   /* no rounded card look */
-    box-shadow: none;   /* remove card-style shadow */
+    border-radius: 0;
+    box-shadow: none;
     display: block;
 }
 
@@ -90,7 +89,6 @@ a { text-decoration: none; color: inherit; }
     content: '•';
     color: #ff6622;
     font-weight: bold;
-    display: inline-block;
     width: 1em;
     margin-left: -1em;
 }
@@ -100,14 +98,14 @@ a { text-decoration: none; color: inherit; }
 .policy-content ul { margin-left: 20px; margin-bottom: 20px; }
 .policy-content a { color: #ff6622; text-decoration: underline; }
 
-/* CONTACT PAGE SPECIFIC */
-.contact-body { background-color: #fcfbf8; /* Beige background */ }
+/* CONTACT PAGE */
+.contact-body { background-color: #fcfbf8; }
 .contact-header-title {
     text-align: center;
     font-size: 3.5rem;
     margin-top: 40px;
     margin-bottom: 40px;
-    font-family: serif; /* Matching the Serif font in image */
+    font-family: serif;
     font-weight: 400;
     letter-spacing: 2px;
 }
@@ -117,19 +115,21 @@ a { text-decoration: none; color: inherit; }
     margin: 0 auto 60px auto;
     padding: 50px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    border-radius: 6px;
 }
 
+/* CONTACT LABELS */
 .form-label {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #bfaea6; /* Beige/Grey text color from image */
+    color: #bfaea6;
     letter-spacing: 1px;
     margin-bottom: 8px;
     text-transform: uppercase;
     font-family: serif;
 }
 
-/* Form Inputs */
+/* CONTACT INPUTS */
 .input-line {
     border: none;
     border-bottom: 1px solid #ddd;
@@ -138,6 +138,7 @@ a { text-decoration: none; color: inherit; }
     margin-bottom: 25px;
     font-family: 'Poppins', sans-serif;
     outline: none;
+    background-color: transparent;
 }
 .input-box {
     border: 1px solid #ddd;
@@ -145,13 +146,16 @@ a { text-decoration: none; color: inherit; }
     padding: 12px;
     margin-bottom: 25px;
     font-family: 'Poppins', sans-serif;
-    box-sizing: border-box; /* Ensures padding doesn't widen element */
+    box-sizing: border-box;
     outline: none;
+    background-color: transparent;
 }
-.input-line:focus, .input-box:focus { border-color: #333; }
+.input-line:focus,
+.input-box:focus { border-color: #333; }
 
+/* CONTACT BUTTON */
 .btn-submit {
-    background-color: #ff6622; /* The Orange Color */
+    background-color: #ff6622;
     color: white;
     border: none;
     padding: 15px 40px;
@@ -164,14 +168,22 @@ a { text-decoration: none; color: inherit; }
 }
 .btn-submit:hover { background-color: #e65c19; }
 
-/* CONTACT FOOTER (Home) */
-.contact-footer-box {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    margin-top: 40px;
+/* CONTACT FORM LAYOUT */
+.contact-form { width: 100%; }
+.contact-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 10px;
 }
-.contact-footer-box a { color: #ff6622; font-weight: 600; }
+.contact-field { flex: 1; }
+
+/* MOBILE LAYOUT */
+@media (max-width: 768px) {
+    .contact-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
 
 /* FOOTER */
 footer {
@@ -182,10 +194,22 @@ footer {
     margin-top: 0;
     background-color: #fff;
 }
-.footer-links a { margin: 0 8px; color: #666; text-decoration: none; }
+.footer-links a {
+    margin: 0 8px;
+    color: #666;
+    text-decoration: none;
+}
 .footer-links a:hover { color: #000; }
 
-/* RESPONSIVE */
+.contact-footer-box {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    margin-top: 40px;
+}
+.contact-footer-box a { color: #ff6622; font-weight: 600; }
+
+/* RESPONSIVE SHARED */
 @media (max-width: 768px) {
     .hero { flex-direction: column; text-align: center; }
     .hero-text { order: 2; }
