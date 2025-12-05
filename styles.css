@@ -51,12 +51,23 @@ a { text-decoration: none; color: inherit; }
 .welcome-text { font-size: 3.5rem; font-weight: 700; margin: 0 0 20px 0; }
 .website-word { color: #ff6622; }
 
-.hero-image { flex-shrink: 0; margin-left: 50px; }
+/* updated hero image area */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 50px;
+}
+
 .profile-pic {
-    width: 300px; /* Adjust size as needed */
+    max-width: 360px;   /* similar prominence as reference */
+    width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 0;   /* no rounded card look */
+    box-shadow: none;   /* remove card-style shadow */
+    display: block;
 }
 
 /* CONTENT SECTIONS */
@@ -179,7 +190,7 @@ footer {
     .hero { flex-direction: column; text-align: center; }
     .hero-text { order: 2; }
     .hero-image { order: 1; margin: 0 0 30px 0; }
-    .profile-pic { width: 220px; }
+    .profile-pic { max-width: 220px; }
     .navbar { padding: 15px; }
     .contact-card { padding: 20px; margin: 20px; }
     .footer-links a { display: block; margin: 8px 0; }
