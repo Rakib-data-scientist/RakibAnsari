@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rakib Ansari - Staffing & Recruitment</title>
+    <title>Contact Us - Rakib Ansari</title>
     <link rel="stylesheet" href="/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="navbar">
+<body class="contact-body">
+    <header class="navbar" style="background-color: transparent;">
         <div class="logo"></div>
         <nav>
             <a href="/Home">Home</a>
@@ -16,45 +16,41 @@
         </nav>
     </header>
 
-    <main class="container">
-        <section class="hero">
-            <div class="hero-text">
-                <h1>Hello</h1>
-                <h1 class="welcome-text">Welcome to my <span class="website-word">website!</span></h1>
+    <h1 class="contact-header-title">CONTACT US</h1>
+
+    <div class="contact-card">
+        <form action="mailto:help@rakibansari.com" method="GET" enctype="text/plain">
+            <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 200px;">
+                    <div class="form-label">NAME*</div>
+                    <input type="text" name="Name" class="input-line" required>
+                    <div style="color: #d9534f; font-size: 12px; display:none;">This field is required</div>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <div class="form-label">EMAIL*</div>
+                    <input type="email" name="Email" class="input-line" required>
+                    <div style="color: #d9534f; font-size: 12px; display:none;">Please enter a valid email address</div>
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="/Rakib.png" alt="Rakib Ansari" class="profile-pic">
+
+            <div style="margin-top: 10px;">
+                <input type="text" name="Subject" placeholder="Subject" class="input-box" required>
             </div>
-        </section>
 
-        <section class="content-section">
-            <h2 class="section-title">My Story</h2>
-            <p>Hi, I’m <strong>Rakib Ansari</strong>, I'm the founder of a staffing and recruitment agency that helps companies and startups hire dependable and highly skilled talent, especially developers and tech professionals.</p>
-            <p>I stepped into the world of recruitment after working closely with early stage startups and growing tech companies. I noticed the same challenge everywhere: teams were ambitious, products were promising, and growth targets were clear, but hiring the right developers always slowed everything down. This hiring bottleneck inspired me to focus full-time on solving one thing, helping businesses hire the right talent faster.</p>
-            <p>I began by supporting small tech teams with their first technical hires. With time, I started working with funded startups and global companies that needed specialists, remote developers, long term contractors, or entire technical teams. Through this journey, I developed a structured hiring approach built around screening for technical skills, work ethic, communication ability, and cultural fit. The four things that create high-performing teams.</p>
-            <p>Today, I work directly with founders, CTOs and HR leaders to eliminate the stress of recruitment so they can focus on growth. My work is exclusively for employers who need reliable, vetted talent.</p>
+            <div style="margin-top: 20px;">
+                <div class="form-label">MESSAGE*</div>
+                <textarea name="Body" class="input-box" style="height: 150px; resize: vertical;" required></textarea>
+            </div>
 
-            <h2 class="section-title">What I Offer</h2>
-            <ul class="offer-list">
-                <li><strong>Contract & Remote Staffing:</strong> ₹80,000 per role</li>
-                <li><strong>Tech and Non-Tech Hiring:</strong> ₹90,000 - ₹3,00,000 per month per role</li>
-                <li><strong>Bulk Hiring for Operations Roles:</strong> ₹1,20,000 – ₹8,00,000 per month</li>
-                <li><strong>Dedicated Recruiter Support for Companies:</strong> ₹2,50,000 – ₹1,10,00,000 per month</li>
-                <li><strong>End-to-End Talent Acquisition & Screening:</strong> ₹1,20,00,000 – ₹2,60,00,000 per engagement</li>
-            </ul>
-        </section>
+            <button type="submit" class="btn-submit">SEND REQUEST</button>
+        </form>
+    </div>
 
-        <section class="contact-footer-box">
-            <h2 class="section-title">Contact</h2>
-            <p>Want to connect? Just send a mail on this email id: <a href="mailto:help@rakibansari.com">help@rakibansari.com</a></p>
-        </section>
-    </main>
-
-    <footer>
+    <footer style="background-color: #fcfbf8; border: none;">
         <div class="footer-links">
             <a href="/Terms">Terms & Conditions</a> | 
             <a href="/Privacy">Privacy Policy</a> | 
-            <a href="/Refund">Cancellation Refund Policy</a> | 
+            <a href="/Refund">Cancellation & Refund Policy</a> | 
             <a href="/Contact">Contact</a> | 
             <a href="/Shipping">Shipping & Delivery Policy</a>
         </div>
