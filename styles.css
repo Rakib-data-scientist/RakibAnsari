@@ -62,7 +62,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .profile-pic {
-    max-width: 450px;   /* similar prominence as reference */
+    max-width: 500px;   /* similar prominence as reference */
     width: 100%;
     height: auto;
     border-radius: 0;   /* no rounded card look */
