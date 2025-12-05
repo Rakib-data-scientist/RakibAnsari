@@ -6,7 +6,32 @@
     <title>Contact Us - Rakib Ansari</title>
     <link rel="stylesheet" href="/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- START Formbricks Surveys -->
+    <script type="text/javascript">
+    !function(){
+      var appUrl = "https://app.formbricks.com";
+      var environmentId = "cmis8fq5dt6hdad017qcqh2bf";
+
+      var t = document.createElement("script");
+      t.type = "text/javascript";
+      t.async = true;
+      t.src = appUrl + "/js/formbricks.umd.cjs";
+
+      var e = document.getElementsByTagName("script")[0];
+      e.parentNode.insertBefore(t, e);
+
+      setTimeout(function () {
+        window.formbricks.setup({
+          environmentId: environmentId,
+          appUrl: appUrl
+        });
+      }, 500);
+    }();
+    </script>
+    <!-- END Formbricks Surveys -->
 </head>
+
 <body class="contact-body">
     <header class="navbar" style="background-color: transparent;">
         <div class="logo"></div>
@@ -19,31 +44,8 @@
     <h1 class="contact-header-title">CONTACT US</h1>
 
     <div class="contact-card">
-        <form action="mailto:help@rakibansari.com" method="GET" enctype="text/plain">
-            <div style="display: flex; gap: 40px; flex-wrap: wrap;">
-                <div style="flex: 1; min-width: 200px;">
-                    <div class="form-label">NAME*</div>
-                    <input type="text" name="Name" class="input-line" required>
-                    <div style="color: #d9534f; font-size: 12px; display:none;">This field is required</div>
-                </div>
-                <div style="flex: 1; min-width: 200px;">
-                    <div class="form-label">EMAIL*</div>
-                    <input type="email" name="Email" class="input-line" required>
-                    <div style="color: #d9534f; font-size: 12px; display:none;">Please enter a valid email address</div>
-                </div>
-            </div>
-
-            <div style="margin-top: 10px;">
-                <input type="text" name="Subject" placeholder="Subject" class="input-box" required>
-            </div>
-
-            <div style="margin-top: 20px;">
-                <div class="form-label">MESSAGE*</div>
-                <textarea name="Body" class="input-box" style="height: 150px; resize: vertical;" required></textarea>
-            </div>
-
-            <button type="submit" class="btn-submit">SEND REQUEST</button>
-        </form>
+        <!-- 🔥 Formbricks container -->
+        <div id="formbricks-container"></div>
     </div>
 
     <footer style="background-color: #fcfbf8; border: none;">
@@ -55,5 +57,15 @@
             <a href="/Shipping">Shipping & Delivery Policy</a>
         </div>
     </footer>
+
+    <!-- mount Formbricks form into placeholder -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.formbricks) {
+          formbricks.mount("formbricks-container");
+        }
+      });
+    </script>
+
 </body>
 </html>
